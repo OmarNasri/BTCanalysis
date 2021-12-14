@@ -11,11 +11,17 @@ def highest(start,end):
     comparable = daylist[0]
     comparable = comparable[1]
 
+    #Iterate through the total volumelist and find the day with biggest volume
+
     for i in daylist:
         if i[1]>comparable:
             biggest = i
             comparable = i[1]
+
+    # Convert the date with biggest volume back to normal time for output
     date = pandas.to_datetime(biggest[0], unit="ms")
+
+    #Get the price of bitcoin from the date that had highest trading volume for output
     price = requestData.getData(f"{date.day}/{date.month}/{date.year}",f"{date.day}/{date.month}/{date.year}")["prices"]
     price = price[0]
     return f"Date with the highest trading volume is {date.day}/{date.month}/{date.year} and the price of bitcoin from this date is : {price[1]}"

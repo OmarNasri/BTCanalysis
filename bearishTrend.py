@@ -12,6 +12,7 @@ def downwardTrend(start,end):
     comparable = daily[0]
     comparable = float(comparable[1])
 
+    #Iterate the pricelist and find the amount of dates in a row where the price of BTC has lowered
     for i in daily:
         if i[1]<comparable:
             consecutive+=1
