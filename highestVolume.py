@@ -20,9 +20,9 @@ def highest(start,end):
 
     # Convert the date with biggest volume back to normal time for output
     date = pandas.to_datetime(biggest[0], unit="ms")
-
-    #Get the price of bitcoin from the date that had highest trading volume for output
+    volume = biggest[1]
+    #Get the price of bitcoin in eur from the date that had highest trading volume and multiply it with total volume
     price = requestData.getData(f"{date.day}/{date.month}/{date.year}",f"{date.day}/{date.month}/{date.year}")["prices"]
     price = price[0]
-    return f"Date with the highest trading volume is {date.day}/{date.month}/{date.year} and the price of bitcoin from this date is : {price[1]}"
+    return f"Date with the highest trading volume is {date.day}/{date.month}/{date.year} and the volume in eur: {price[1]*volume}"
 

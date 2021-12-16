@@ -17,5 +17,5 @@ bought bitcoin to maximize profits
 ● Expected output: A pair of days: The day to buy and the day to sell. In the case when one
 should neither buy nor sell, return an indicative output of your choice.
 
-For the functions to work, Dates must be passed in following format: DD/MM/YYYY.
-Incorrect input will result in crashing of the program.
+For the functions to work, Dates must be passed in following format: DD/MM/YYYY. Start date must also be earlier than end date.
+ Incorrect input will result in crashing of the program.
