@@ -1,6 +1,6 @@
 # BTCproject
 
-All the functions are written in seperate files. 
+All the functions are written in separate files. 
 
 Solution for problem A: bearishTrend.py.
 How many days is the longest bearish (downward) trend within a given date range?
